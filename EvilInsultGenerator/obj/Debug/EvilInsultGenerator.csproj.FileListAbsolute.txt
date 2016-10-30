@@ -1,0 +1,13 @@
+C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\bin\Debug\EvilInsultGenerator.exe.config
+C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\bin\Debug\EvilInsultGenerator.exe.manifest
+C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\bin\Debug\EvilInsultGenerator.application
+C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\bin\Debug\EvilInsultGenerator.exe
+C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\bin\Debug\EvilInsultGenerator.pdb
+C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\obj\Debug\EvilInsultGenerator.AboutBox1.resources
+C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\obj\Debug\EvilInsultGenerator.MainForm.resources
+C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\obj\Debug\EvilInsultGenerator.Properties.Resources.resources
+C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\obj\Debug\EvilInsultGenerator.csproj.GenerateResource.Cache
+C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\obj\Debug\EvilInsultGenerator.exe.manifest
+C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\obj\Debug\EvilInsultGenerator.application
+C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\obj\Debug\EvilInsultGenerator.exe
+C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\obj\Debug\EvilInsultGenerator.pdb
