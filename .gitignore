@@ -32,3 +32,5 @@
 *.dSYM/
 *.su
 *.suo
+*.db
+EvilInsultGenerator/Resources/Thumbs.db
