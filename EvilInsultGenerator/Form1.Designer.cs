@@ -108,7 +108,7 @@
             this.rtxtInsult.CausesValidation = false;
             this.rtxtInsult.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.rtxtInsult.DetectUrls = false;
-            this.rtxtInsult.Font = new System.Drawing.Font("Arial Black", 38F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtxtInsult.Font = new System.Drawing.Font("Arial Black", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtxtInsult.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.rtxtInsult.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.rtxtInsult.Location = new System.Drawing.Point(0, 27);

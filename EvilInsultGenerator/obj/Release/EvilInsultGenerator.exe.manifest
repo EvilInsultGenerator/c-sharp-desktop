@@ -4,7 +4,7 @@
   <description asmv2:iconFile="EIG_Application.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="EvilInsultGenerator" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="EvilInsultGenerator" version="1.0.1.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="EvilInsultGenerator.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -44,13 +44,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EvilInsultGenerator.exe" size="295424">
-      <assemblyIdentity name="EvilInsultGenerator" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="EvilInsultGenerator" version="1.0.1.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>t60EUKd6R/pNp12aR4AzXqYIFCslvkTI5E05aMN4dxE=</dsig:DigestValue>
+        <dsig:DigestValue>pFqRfuMTOu2eGJEK5kKCz0yuesJt3oN/623mjm4Qu3w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -63,13 +63,13 @@
       <dsig:DigestValue>WlboIc/6/n6+OmcpYI1I4UW7DM3lCAlS30ujoHfugGA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="EvilInsultGenerator.exe.config" size="184">
+  <file name="EvilInsultGenerator.exe.config" size="438">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>FqWy0dfMmRS85zkU1NlW07p6LsNOPUHodvLiZcFdgJY=</dsig:DigestValue>
+      <dsig:DigestValue>jv+lZ4f4/BHyk9EwjLylDe1zuwY3imyB8ymxdN5QeoQ=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

@@ -59,10 +59,6 @@ namespace EvilInsultGenerator
                     // Fixed funky chingchang yellow nigger signs
                     client.Encoding = Encoding.UTF8;
                     // We no need no Proxycation
-                    client.Proxy = GlobalProxySelection.GetEmptyWebProxy();
-                    // Expect us.
-                    ServicePointManager.Expect100Continue = false;
-
                     return client.DownloadString(new Uri(url));
                 }
             }
