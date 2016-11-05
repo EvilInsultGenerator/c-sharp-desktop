@@ -1,4 +1,7 @@
 # Evil Insult Generator C# Desktop App
+[![Build Status](https://travis-ci.org/EvilInsultGenerator/c-sharp-desktop.svg?branch=master)](https://travis-ci.org/EvilInsultGenerator/c-sharp-desktop)
+[![CodeFactor](https://www.codefactor.io/repository/github/evilinsultgenerator/c-sharp-desktop/badge)](https://www.codefactor.io/repository/github/evilinsultgenerator/c-sharp-desktop)
+[![Website](https://img.shields.io/website-up-down-green-red/https/evilinsult.com.svg)]()
 
 Evil Insult Generator's goal is to offer the most evil insults. Please help us to reach this honorable purpose by submitting insults via mail.
 
