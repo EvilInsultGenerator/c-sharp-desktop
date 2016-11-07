@@ -28,12 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.btnGenerate = new System.Windows.Forms.Button();
-            this.combLang = new System.Windows.Forms.ComboBox();
             this.rtxtInsult = new System.Windows.Forms.RichTextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.websiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,60 +43,26 @@
             this.newsletterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateCheckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnCopy = new System.Windows.Forms.Button();
+            this.btnCopy = new System.Windows.Forms.ToolStripMenuItem();
+            this.combLang = new System.Windows.Forms.ToolStripComboBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnGenerate
             // 
+            this.btnGenerate.AutoSize = true;
+            this.btnGenerate.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnGenerate.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerate.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerate.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnGenerate.Location = new System.Drawing.Point(0, 267);
+            this.btnGenerate.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnGenerate.Location = new System.Drawing.Point(-5, 267);
             this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(699, 105);
+            this.btnGenerate.Size = new System.Drawing.Size(711, 105);
             this.btnGenerate.TabIndex = 0;
             this.btnGenerate.Text = "&Generate Insult";
-            this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.UseVisualStyleBackColor = false;
             this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
-            // 
-            // combLang
-            // 
-            this.combLang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.combLang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.combLang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combLang.Font = new System.Drawing.Font("Calibri", 14F);
-            this.combLang.FormattingEnabled = true;
-            this.combLang.ItemHeight = 23;
-            this.combLang.Items.AddRange(new object[] {
-            "ar",
-            "bn",
-            "de",
-            "el",
-            "en",
-            "es",
-            "fr",
-            "hi",
-            "ja",
-            "jv",
-            "ko",
-            "mr",
-            "pt",
-            "ru",
-            "sw",
-            "ta",
-            "te",
-            "tr",
-            "ur",
-            "vi",
-            "zh"});
-            this.combLang.Location = new System.Drawing.Point(313, 230);
-            this.combLang.Name = "combLang";
-            this.combLang.Size = new System.Drawing.Size(65, 31);
-            this.combLang.Sorted = true;
-            this.combLang.TabIndex = 2;
             // 
             // rtxtInsult
             // 
@@ -108,37 +71,34 @@
             this.rtxtInsult.CausesValidation = false;
             this.rtxtInsult.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.rtxtInsult.DetectUrls = false;
-            this.rtxtInsult.Font = new System.Drawing.Font("Arial Black", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtxtInsult.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.rtxtInsult.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtxtInsult.ForeColor = System.Drawing.SystemColors.Highlight;
             this.rtxtInsult.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.rtxtInsult.Location = new System.Drawing.Point(0, 27);
-            this.rtxtInsult.MaximumSize = new System.Drawing.Size(698, 194);
+            this.rtxtInsult.Location = new System.Drawing.Point(0, 30);
             this.rtxtInsult.MinimumSize = new System.Drawing.Size(698, 194);
             this.rtxtInsult.Name = "rtxtInsult";
             this.rtxtInsult.ReadOnly = true;
-            this.rtxtInsult.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.rtxtInsult.Size = new System.Drawing.Size(698, 194);
+            this.rtxtInsult.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.rtxtInsult.Size = new System.Drawing.Size(698, 241);
             this.rtxtInsult.TabIndex = 3;
             this.rtxtInsult.Text = "";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.infoToolStripMenuItem,
-            this.updateCheckToolStripMenuItem});
+            this.combLang,
+            this.btnCopy,
+            this.updateCheckToolStripMenuItem,
+            this.infoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(699, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(699, 27);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // infoToolStripMenuItem
             // 
+            this.infoToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.infoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.websiteToolStripMenuItem,
             this.proposalToolStripMenuItem,
@@ -147,7 +107,7 @@
             this.aboutToolStripMenuItem});
             this.infoToolStripMenuItem.Image = global::EvilInsultGenerator.Properties.Resources.Info_menu;
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(56, 23);
             this.infoToolStripMenuItem.Text = "Info";
             // 
             // websiteToolStripMenuItem
@@ -159,7 +119,7 @@
             this.legalToolStripMenuItem});
             this.websiteToolStripMenuItem.Image = global::EvilInsultGenerator.Properties.Resources.eig32;
             this.websiteToolStripMenuItem.Name = "websiteToolStripMenuItem";
-            this.websiteToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.websiteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.websiteToolStripMenuItem.Text = "Website";
             this.websiteToolStripMenuItem.Click += new System.EventHandler(this.websiteToolStripMenuItem_Click);
             // 
@@ -198,7 +158,7 @@
             // 
             this.proposalToolStripMenuItem.Image = global::EvilInsultGenerator.Properties.Resources.Proposal;
             this.proposalToolStripMenuItem.Name = "proposalToolStripMenuItem";
-            this.proposalToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.proposalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.proposalToolStripMenuItem.Text = "Proposal";
             this.proposalToolStripMenuItem.Click += new System.EventHandler(this.proposalToolStripMenuItem_Click);
             // 
@@ -206,7 +166,7 @@
             // 
             this.contactToolStripMenuItem.Image = global::EvilInsultGenerator.Properties.Resources.Contact;
             this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
-            this.contactToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.contactToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.contactToolStripMenuItem.Text = "Contact";
             this.contactToolStripMenuItem.Click += new System.EventHandler(this.contactToolStripMenuItem_Click);
             // 
@@ -214,7 +174,7 @@
             // 
             this.newsletterToolStripMenuItem.Image = global::EvilInsultGenerator.Properties.Resources.Newsletter;
             this.newsletterToolStripMenuItem.Name = "newsletterToolStripMenuItem";
-            this.newsletterToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.newsletterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.newsletterToolStripMenuItem.Text = "Newsletter";
             this.newsletterToolStripMenuItem.Click += new System.EventHandler(this.newsletterToolStripMenuItem_Click);
             // 
@@ -222,48 +182,79 @@
             // 
             this.aboutToolStripMenuItem.Image = global::EvilInsultGenerator.Properties.Resources.Info;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // updateCheckToolStripMenuItem
             // 
+            this.updateCheckToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.updateCheckToolStripMenuItem.Image = global::EvilInsultGenerator.Properties.Resources.Update;
             this.updateCheckToolStripMenuItem.Name = "updateCheckToolStripMenuItem";
-            this.updateCheckToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
+            this.updateCheckToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
+            this.updateCheckToolStripMenuItem.Size = new System.Drawing.Size(111, 23);
             this.updateCheckToolStripMenuItem.Text = "Update-Check";
+            this.updateCheckToolStripMenuItem.ToolTipText = "Check for Updates";
             this.updateCheckToolStripMenuItem.Click += new System.EventHandler(this.updateCheckToolStripMenuItem_Click);
             // 
             // btnCopy
             // 
-            this.btnCopy.AutoSize = true;
-            this.btnCopy.FlatAppearance.BorderSize = 0;
-            this.btnCopy.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCopy.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnCopy.Font = new System.Drawing.Font("Calibri", 14F);
+            this.btnCopy.CheckOnClick = true;
             this.btnCopy.Image = global::EvilInsultGenerator.Properties.Resources.Clipboard;
-            this.btnCopy.Location = new System.Drawing.Point(381, 230);
-            this.btnCopy.Margin = new System.Windows.Forms.Padding(0);
             this.btnCopy.Name = "btnCopy";
-            this.btnCopy.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnCopy.Size = new System.Drawing.Size(34, 34);
-            this.btnCopy.TabIndex = 4;
-            this.btnCopy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCopy.UseMnemonic = false;
-            this.btnCopy.UseVisualStyleBackColor = true;
+            this.btnCopy.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
+            this.btnCopy.ShowShortcutKeys = false;
+            this.btnCopy.Size = new System.Drawing.Size(28, 23);
+            this.btnCopy.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.btnCopy.ToolTipText = "Copy to Clipboard";
             this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
+            // 
+            // combLang
+            // 
+            this.combLang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.combLang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combLang.AutoToolTip = true;
+            this.combLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combLang.DropDownWidth = 80;
+            this.combLang.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.combLang.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.combLang.Items.AddRange(new object[] {
+            "ar",
+            "bn",
+            "de",
+            "el",
+            "en",
+            "es",
+            "fr",
+            "hi",
+            "ja",
+            "jv",
+            "ko",
+            "mr",
+            "pt",
+            "ru",
+            "sw",
+            "ta",
+            "te",
+            "tr",
+            "ur",
+            "vi",
+            "zh"});
+            this.combLang.Name = "combLang";
+            this.combLang.Size = new System.Drawing.Size(80, 23);
+            this.combLang.ToolTipText = "Language Selection";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(699, 371);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.btnCopy);
             this.Controls.Add(this.rtxtInsult);
-            this.Controls.Add(this.combLang);
             this.Controls.Add(this.btnGenerate);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
@@ -281,11 +272,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox combLang;
         private System.Windows.Forms.RichTextBox rtxtInsult;
-        private System.Windows.Forms.Button btnCopy;
         private System.Windows.Forms.Button btnGenerate;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem websiteToolStripMenuItem;
@@ -298,6 +286,8 @@
         private System.Windows.Forms.ToolStripMenuItem gitHubToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facebookToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem twitterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripComboBox combLang;
+        private System.Windows.Forms.ToolStripMenuItem btnCopy;
     }
 }
 
