@@ -13,13 +13,11 @@ namespace EvilInsultGenerator
     {
         public MainForm()
         {
-
             InitializeComponent();
             // Set the default selection to the 5th entry ('en' at the moment)
             combLang.SelectedIndex = 4;
             rtxtInsult.SelectionAlignment = HorizontalAlignment.Center;
         }
-
         // Get %TEMP% path of current user
         public string GetTempPath()
         {
@@ -27,7 +25,6 @@ namespace EvilInsultGenerator
             if (!path.EndsWith("\\")) path += "\\";
             return path;
         }
-
         // Logging Setup
         public void LogMessageToFile(string msg)
         {
@@ -47,13 +44,11 @@ namespace EvilInsultGenerator
 
 
         }
-
         // Send our Request to the server
         private string SendRequest(string url)
         {
             try
             {
-
                 using (WebClient client = new WebClient())
                 {
                     // Fixed funky chingchang yellow nigger signs
@@ -69,7 +64,6 @@ namespace EvilInsultGenerator
                 return null;
             }
         }
-
         // On Form load
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -79,45 +73,41 @@ namespace EvilInsultGenerator
                 // and then delete it.
                 File.Delete(GetTempPath() + "EIG_Desktop.log");
                 LogMessageToFile("Info: Found old log file - Removed");
-
             }
             LogMessageToFile("Info: EIG started");
         }
-
         // Generate Insult Button
         // The User wants to generate some insults!
         private void btnGenerate_Click(object sender, EventArgs e)
         {
             // Convert selection to a string
             string lang = combLang.SelectedItem.ToString();
-
-            //JSON.Net
-            // string response = SendRequest("https://evilinsult.com/generate_insult.php?type=json&lang=" + lang);
-
             // Send Request to server and save the response as a string
             string response = SendRequest("https://evilinsult.com/generate_insult.php?type=xml&lang=" + lang);
-
             // Something broke the language selection? No worries. Default is english.
             if (string.IsNullOrWhiteSpace(lang))
             {
                 lang = "en";
                 LogMessageToFile("Error: Language selection failed");
-
             }
             if (response != null)
             {
-                var xmlDoc = new XmlDocument();
-                xmlDoc.LoadXml(response);
-                string insult = xmlDoc.DocumentElement.SelectSingleNode("/insult_info/insult").InnerText;
-
-                // Who needs JSON when you have XML!
-                // JObject ob = JObject.Parse(response);
-                // string insult = (string)ob["insult"];
-
-                // Set the Output
-                rtxtInsult.Text = insult;
-
-                LogMessageToFile("Info: Insult: --- " + insult + " --- in language: " + lang + " generated");
+                try
+                {
+                    var xmlDoc = new XmlDocument();
+                    xmlDoc.LoadXml(response);
+                    string insult = xmlDoc.DocumentElement.SelectSingleNode("/insult_info/insult").InnerText;
+                    // Set the Output
+                    insult = WebUtility.HtmlDecode(insult);
+                    rtxtInsult.Text = insult;
+                    LogMessageToFile("Info: Insult: --- " + insult + " --- in language: " + lang + " generated");
+                }
+                catch (XmlException ex)
+                {
+                    //this report had an error loading!
+                    LogMessageToFile(ex.Message);
+                    rtxtInsult.Text = "****** **** *** ********";
+                }
             }
             else
             {
@@ -125,25 +115,6 @@ namespace EvilInsultGenerator
                 LogMessageToFile("Error: The server did not respond with data");
             }
         }
-
-        // Copy to Clipboard Button
-        private void btnCopy_Click(object sender, EventArgs e)
-        {   
-            // Hidden Exception Handling - nothing to copy? Just use it as Easter Egg!
-            if (string.IsNullOrWhiteSpace(rtxtInsult.Text))
-            {
-                Clipboard.SetText("3.141592653589793238462643383279502884197169 39937510582097494459230781640628620899862803 48253421170679821480865132823066470938446095 50582231725359408128481117450284102701938521 10555964462294895493038196442881097566593344 61284756482337867831652712019091456485669234 60348610454326648213393607260249141273724587 00660631558817488152092096282925409171536436 78925903600113305305488204665213841469519415 11609433057270365759591953092186117381932611 79310511854807446237996274956735188575272489 12279381830119491298336733624406566430860213 94946395224737190702179860943702770539217176 29317675238467481846766940513200056812714526 35608277857713427577896091736371787214684409 01224953430146549585371050792279689258923542 01995611212902196086403441815981362977477130 99605187072113499999983729780499510597317328 16096318595024459455346908302642522308253344 68503526193118817101000313783875288658753320 83814206171776691473035982534904287554687311 59562863882353787593751957781857780532171226 806613001927876611195909216420198");
-                LogMessageToFile("Info: Easter Egg found");
-
-            }
-            else
-            {
-                Clipboard.SetText(rtxtInsult.Text);
-                LogMessageToFile("Info: Insult copied to clipboard");
-
-            }
-        }
-
         // ToolStrip Stuff
 
         // "Website" clicked
@@ -166,7 +137,6 @@ namespace EvilInsultGenerator
         {
             Process.Start("https://github.com/EvilInsultGenerator");
             LogMessageToFile("Info: 'GitHub' clicked");
-
         }
         // "Propasal" clicked
         private void proposalToolStripMenuItem_Click(object sender, EventArgs e)
@@ -194,7 +164,6 @@ namespace EvilInsultGenerator
         {
             Process.Start("https://evilinsult.com/legal.html");
             LogMessageToFile("Info: 'Legal' clicked");
-
         }
         // "Facebook" clicked
         private void facebookToolStripMenuItem_Click(object sender, EventArgs e)
@@ -208,9 +177,7 @@ namespace EvilInsultGenerator
         {
             Process.Start("https://twitter.com/__E__I__G__");
             LogMessageToFile("Info: 'Twitter' clicked");
-
         }
-
         // "Check Updates" clicked
         // Start Update Routine
         private void updateCheckToolStripMenuItem_Click(object sender, EventArgs e)
@@ -227,7 +194,7 @@ namespace EvilInsultGenerator
                 reader = new XmlTextReader(xmlUrl);
                 reader.MoveToContent();
                 string elementName = "";
-                if ((reader.NodeType == XmlNodeType.Element) && (reader.Name == "appinfo"))
+                if (reader.NodeType == XmlNodeType.Element && reader.Name == "appinfo")
                 {
                     while (reader.Read())
                     {
@@ -283,13 +250,27 @@ namespace EvilInsultGenerator
                 }
                 else
                 {
-                    ;
                 }
             }
             else
             {
                 MessageBox.Show("Your version: " + applicationVersion + "  is up to date.", "Check for Updates", MessageBoxButtons.OK, MessageBoxIcon.None);
                 LogMessageToFile("Info: No Update was found.");
+            }
+        }
+        // Copy to Clipboard Button
+        private void btnCopy_Click(object sender, EventArgs e)
+        {
+            // Hidden Exception Handling - nothing to copy? Just use it as Easter Egg!
+            if (string.IsNullOrWhiteSpace(rtxtInsult.Text))
+            {
+                Clipboard.SetText("3.141592653589793238462643383279502884197169 39937510582097494459230781640628620899862803 48253421170679821480865132823066470938446095 50582231725359408128481117450284102701938521 10555964462294895493038196442881097566593344 61284756482337867831652712019091456485669234 60348610454326648213393607260249141273724587 00660631558817488152092096282925409171536436 78925903600113305305488204665213841469519415 11609433057270365759591953092186117381932611 79310511854807446237996274956735188575272489 12279381830119491298336733624406566430860213 94946395224737190702179860943702770539217176 29317675238467481846766940513200056812714526 35608277857713427577896091736371787214684409 01224953430146549585371050792279689258923542 01995611212902196086403441815981362977477130 99605187072113499999983729780499510597317328 16096318595024459455346908302642522308253344 68503526193118817101000313783875288658753320 83814206171776691473035982534904287554687311 59562863882353787593751957781857780532171226 806613001927876611195909216420198");
+                LogMessageToFile("Info: Easter Egg found");
+            }
+            else
+            {
+                Clipboard.SetText(rtxtInsult.Text);
+                LogMessageToFile("Info: Insult copied to clipboard");    
             }
         }
     }

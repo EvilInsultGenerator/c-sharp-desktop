@@ -4,7 +4,7 @@
   <description asmv2:iconFile="EIG_Application.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="EvilInsultGenerator" version="1.0.1.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="EvilInsultGenerator" version="1.0.2.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="EvilInsultGenerator.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -44,13 +44,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EvilInsultGenerator.exe" size="295424">
-      <assemblyIdentity name="EvilInsultGenerator" version="1.0.1.0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="EvilInsultGenerator" version="1.0.2.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pFqRfuMTOu2eGJEK5kKCz0yuesJt3oN/623mjm4Qu3w=</dsig:DigestValue>
+        <dsig:DigestValue>4J9BgLuHhJYecjMXDjxo9zrKbewzLmgd1XmQ/QfIVjo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
