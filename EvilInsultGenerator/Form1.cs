@@ -14,8 +14,8 @@ namespace EvilInsultGenerator
         public MainForm()
         {
             InitializeComponent();
-            // Set the default selection to the 5th entry ('en' at the moment)
-            combLang.SelectedIndex = 4;
+            // Set the default selection to the 1st entry ('en' at the moment)
+            combLang.SelectedIndex = 0;
             rtxtInsult.SelectionAlignment = HorizontalAlignment.Center;
         }
         // Get %TEMP% path of current user
