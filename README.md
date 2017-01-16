@@ -9,7 +9,7 @@ Evil Insult Generator's goal is to offer the most evil insults. Please help us t
 
 ### Installation
 
-Download the latest [release](https://github.com/EvilInsultGenerator/c-sharp-desktop/releases/latest/) from GitHub. This software is available for Windows only, but works fine with [Wine](https://www.winehq.org/).
+Download the latest [release](https://github.com/EvilInsultGenerator/c-sharp-desktop/releases/latest/) from GitHub. This software is available for Windows. For Linux and macOS [Wine](https://www.winehq.org/) or [Mono](http://www.mono-project.com/) is required.
 
 Developers can use an IDE like [Visual Studio](https://www.visualstudio.com/) or a text editor to edit the code.
 
