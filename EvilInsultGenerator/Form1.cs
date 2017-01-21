@@ -5,10 +5,10 @@ using System.Net;
 using System.IO;
 using System.Xml;
 using System.Diagnostics;
+using System.Collections.Generic;
 
 namespace EvilInsultGenerator
 {
-
     public partial class MainForm : Form
     {
         public MainForm()
@@ -30,7 +30,6 @@ namespace EvilInsultGenerator
         {
             StreamWriter sw = File.AppendText(
                 GetTempPath() + "EIG_Desktop.log");
-
             try
             {
                 string logLine = String.Format(
@@ -41,8 +40,6 @@ namespace EvilInsultGenerator
             {
                 sw.Close();
             }
-
-
         }
         // Send our Request to the server
         private string SendRequest(string url)
@@ -122,7 +119,6 @@ namespace EvilInsultGenerator
         {
             Process.Start("https://evilinsult.com");
             LogMessageToFile("Info: 'Website' clicked");
-
         }
         // "About" clicked
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -130,7 +126,6 @@ namespace EvilInsultGenerator
             AboutBox1 a = new AboutBox1();
             a.Show();
             LogMessageToFile("Info: 'About' clicked");
-
         }
         // "GitHub" clicked
         private void gitHubToolStripMenuItem_Click(object sender, EventArgs e)
@@ -143,21 +138,18 @@ namespace EvilInsultGenerator
         {
             Process.Start("mailto:marvin@evilinsult.com?Subject=Evil%20Insult%20Generator%20Proposal&Body=Hej%20fuckers%2C%0A%0Aplease%20add%20this%20beauty%3A%0A%0Ainsult%3A%20...%0Alanguage%3A%20...%0Acomment%20%28optional%29%3A%20...%0A%0A...%0A");
             LogMessageToFile("Info: 'Proposal' clicked.");
-
         }
         // "Contact" clicked
         private void contactToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Process.Start("mailto:marvin@evilinsult.com?Subject=Evil%20Insult%20Generator%20Contact&Body=Marvin%2C%20fuck%20you%21");
             LogMessageToFile("Info: 'Contact' clicked");
-
         }
         // "Newsletter" clicked
         private void newsletterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Process.Start("https://evilinsult.com/newsletter/");
             LogMessageToFile("Info: 'Newsletter' clicked");
-
         }
         // "Legal" clicked
         private void legalToolStripMenuItem_Click(object sender, EventArgs e)
@@ -170,7 +162,6 @@ namespace EvilInsultGenerator
         {
             Process.Start("https://www.facebook.com/EvilInsultGenerator/");
             LogMessageToFile("Info: 'Facebook' clicked");
-
         }
         // "Twitter" clicked
         private void twitterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -183,73 +174,30 @@ namespace EvilInsultGenerator
         private void updateCheckToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LogMessageToFile("Info: 'Check Update' clicked");
-            string downloadUrl = "";
-            Version newVersion = null;
-            string aboutUpdate = "";
-            string xmlUrl = "https://evilinsult.com/update.xml";
-            XmlTextReader reader = null;
-            // Try to parse the XML from the server
-            try
-            {
-                reader = new XmlTextReader(xmlUrl);
-                reader.MoveToContent();
-                string elementName = "";
-                if (reader.NodeType == XmlNodeType.Element && reader.Name == "appinfo")
-                {
-                    while (reader.Read())
-                    {
-                        if (reader.NodeType == XmlNodeType.Element)
-                        {
-                            elementName = reader.Name;
-                        }
-                        else
-                        {
-                            if ((reader.NodeType == XmlNodeType.Text) && (reader.HasValue))
-                                switch (elementName)
-                                {
-                                    case "version":
-                                        newVersion = new Version(reader.Value);
-                                        break;
-                                    case "url":
-                                        downloadUrl = reader.Value;
-                                        break;
-                                    case "about":
-                                        aboutUpdate = reader.Value;
-                                        break;
-                                }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                LogMessageToFile("Error: " + ex);
-                MessageBox.Show(ex.Message);
-                Environment.Exit(1);
-            }
-            finally
-            {
-                if (reader != null)
-                    reader.Close();
-            }
+            Dictionary<string, string> appInfo;
+            Version newVersion;
+
+            // Retrieve the update info from the server
+            if (TryParseAppInfo(out appInfo) == false) return;
+            newVersion = new Version(appInfo["version"]);
+
             // Compare Version Numbers
             Version applicationVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
             if (applicationVersion.CompareTo(newVersion) < 0)
             {
-                string str = String.Format("New version found!\nYour version: {0}.\nNewest version: {1}. \nAdded in this version: {2}. ", applicationVersion, newVersion, aboutUpdate);
+                string str = $"New version found!\nYour version: {applicationVersion}.\nNewest version: {newVersion}. \nAdded in this version: {appInfo["about"]}.";
                 LogMessageToFile("Info: An Update was found.");
                 if (DialogResult.No != MessageBox.Show(str + "\nWould you like to download this update?", "Check for updates", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                 {
                     try
                     {
                         // Launch the Browser for download (simpler)
-                        Process.Start(downloadUrl);
+                        Process.Start(appInfo["url"]);
                     }
-                    catch { }
-                    return;
-                }
-                else
-                {
+                    catch
+                    {
+                        return;
+                    }
                 }
             }
             else
@@ -270,7 +218,40 @@ namespace EvilInsultGenerator
             else
             {
                 Clipboard.SetText(rtxtInsult.Text);
-                LogMessageToFile("Info: Insult copied to clipboard");    
+                LogMessageToFile("Info: Insult copied to clipboard");
+            }
+        }
+
+        // Load and parse the app info xml
+        private bool TryParseAppInfo(out Dictionary<string, string> appInfo)
+        {
+            appInfo = new Dictionary<string, string>();
+            const string xmlUrl = "https://evilinsult.com/update.xml";
+            try
+            {
+                using (XmlReader reader = XmlReader.Create(xmlUrl))
+                {
+                    reader.MoveToContent();
+                    if (reader.NodeType != XmlNodeType.Element || reader.Name != "appinfo") return false;
+                    while (reader.Read())
+                    {
+                        switch (reader.NodeType)
+                        {
+                            case XmlNodeType.Element:
+                                appInfo[reader.Name] = reader.ReadElementContentAsString();
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                LogMessageToFile("Error: " + ex);
+                MessageBox.Show(ex.Message);
+                return false;
             }
         }
     }
