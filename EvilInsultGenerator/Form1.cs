@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text;
 using System.Windows.Forms;
 using System.Net;
@@ -108,7 +108,7 @@ namespace EvilInsultGenerator
             }
             else
             {
-                rtxtInsult.Text = "The Server did not provide any data";
+                rtxtInsult.Text = "The server did not provide any data";
                 LogMessageToFile("Error: The server did not respond with data");
             }
         }
