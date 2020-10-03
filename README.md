@@ -48,12 +48,3 @@ We love to get in touch with you. Feel welcome to email your questions and feedb
 ## Screenshots
 
 ![Evil Insult Generator C# Desktop App](https://cloud.githubusercontent.com/assets/23154819/19838935/65761158-9ed9-11e6-96b6-85baf9edb430.PNG)
-
-
-## CERTUM Verification
-> Order Number: ZoZE/002994/MS/16/01/2017
-> E=pdennert@pcteufel-gifhorn.de,
-> CN=Open Source Developer,
-> Pierre Dennert,
-> O=PC-Teufel.de,
-> C=DE
