@@ -1,0 +1,14 @@
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\bin\Debug\EvilInsultGenerator.exe.config
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\bin\Debug\EvilInsultGenerator.exe.manifest
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\bin\Debug\EvilInsultGenerator.application
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\bin\Debug\EvilInsultGenerator.exe
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\bin\Debug\EvilInsultGenerator.pdb
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\obj\Debug\EvilInsultGenerator.AboutBox1.resources
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\obj\Debug\EvilInsultGenerator.MainForm.resources
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\obj\Debug\EvilInsultGenerator.Properties.Resources.resources
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\obj\Debug\EvilInsultGenerator.csproj.GenerateResource.cache
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\obj\Debug\EvilInsultGenerator.csproj.CoreCompileInputs.cache
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\obj\Debug\EvilInsultGenerator.exe.manifest
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\obj\Debug\EvilInsultGenerator.application
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\obj\Debug\EvilInsultGenerator.exe
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\obj\Debug\EvilInsultGenerator.pdb
