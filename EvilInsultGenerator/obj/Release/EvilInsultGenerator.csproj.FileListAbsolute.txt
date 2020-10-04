@@ -1,26 +1,14 @@
-C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\bin\Release\EvilInsultGenerator.exe.config
-C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\bin\Release\EvilInsultGenerator.exe.manifest
-C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\bin\Release\EvilInsultGenerator.application
-C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\bin\Release\EvilInsultGenerator.exe
-C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\bin\Release\EvilInsultGenerator.pdb
-C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\obj\Release\EvilInsultGenerator.AboutBox1.resources
-C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\obj\Release\EvilInsultGenerator.MainForm.resources
-C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\obj\Release\EvilInsultGenerator.Properties.Resources.resources
-C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\obj\Release\EvilInsultGenerator.csproj.GenerateResource.Cache
-C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\obj\Release\EvilInsultGenerator.exe.manifest
-C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\obj\Release\EvilInsultGenerator.application
-C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\obj\Release\EvilInsultGenerator.exe
-C:\Users\Schok\documents\visual studio 2015\Projects\EvilInsultGenerator\EvilInsultGenerator\obj\Release\EvilInsultGenerator.pdb
-C:\Users\Schok\Documents\GitHub\c-sharp-desktop\EvilInsultGenerator\bin\Release\EvilInsultGenerator.exe.config
-C:\Users\Schok\Documents\GitHub\c-sharp-desktop\EvilInsultGenerator\bin\Release\EvilInsultGenerator.exe.manifest
-C:\Users\Schok\Documents\GitHub\c-sharp-desktop\EvilInsultGenerator\bin\Release\EvilInsultGenerator.application
-C:\Users\Schok\Documents\GitHub\c-sharp-desktop\EvilInsultGenerator\bin\Release\EvilInsultGenerator.exe
-C:\Users\Schok\Documents\GitHub\c-sharp-desktop\EvilInsultGenerator\bin\Release\EvilInsultGenerator.pdb
-C:\Users\Schok\Documents\GitHub\c-sharp-desktop\EvilInsultGenerator\obj\Release\EvilInsultGenerator.AboutBox1.resources
-C:\Users\Schok\Documents\GitHub\c-sharp-desktop\EvilInsultGenerator\obj\Release\EvilInsultGenerator.MainForm.resources
-C:\Users\Schok\Documents\GitHub\c-sharp-desktop\EvilInsultGenerator\obj\Release\EvilInsultGenerator.Properties.Resources.resources
-C:\Users\Schok\Documents\GitHub\c-sharp-desktop\EvilInsultGenerator\obj\Release\EvilInsultGenerator.csproj.GenerateResource.Cache
-C:\Users\Schok\Documents\GitHub\c-sharp-desktop\EvilInsultGenerator\obj\Release\EvilInsultGenerator.exe.manifest
-C:\Users\Schok\Documents\GitHub\c-sharp-desktop\EvilInsultGenerator\obj\Release\EvilInsultGenerator.application
-C:\Users\Schok\Documents\GitHub\c-sharp-desktop\EvilInsultGenerator\obj\Release\EvilInsultGenerator.exe
-C:\Users\Schok\Documents\GitHub\c-sharp-desktop\EvilInsultGenerator\obj\Release\EvilInsultGenerator.pdb
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\bin\Release\EvilInsultGenerator.exe.config
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\bin\Release\EvilInsultGenerator.exe.manifest
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\bin\Release\EvilInsultGenerator.application
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\bin\Release\EvilInsultGenerator.exe
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\bin\Release\EvilInsultGenerator.pdb
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\obj\Release\EvilInsultGenerator.AboutBox1.resources
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\obj\Release\EvilInsultGenerator.MainForm.resources
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\obj\Release\EvilInsultGenerator.Properties.Resources.resources
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\obj\Release\EvilInsultGenerator.csproj.GenerateResource.cache
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\obj\Release\EvilInsultGenerator.csproj.CoreCompileInputs.cache
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\obj\Release\EvilInsultGenerator.exe.manifest
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\obj\Release\EvilInsultGenerator.application
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\obj\Release\EvilInsultGenerator.exe
+C:\Users\lul\Documents\c-sharp-desktop\EvilInsultGenerator\obj\Release\EvilInsultGenerator.pdb

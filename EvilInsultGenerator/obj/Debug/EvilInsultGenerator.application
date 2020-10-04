@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="EvilInsultGenerator.exe.manifest" size="4020">
+    <dependentAssembly dependencyType="install" codebase="EvilInsultGenerator.exe.manifest" size="4018">
       <assemblyIdentity name="EvilInsultGenerator.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>bD0cWzs8vfkNhszQnd06O5nZ7FcK1RwL/ja09U2U5E8=</dsig:DigestValue>
+        <dsig:DigestValue>OxGGA3A/JMH5m8XQ3dhrquQxXI/qGiiJLSwK2kpnnac=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

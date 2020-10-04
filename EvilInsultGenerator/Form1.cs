@@ -13,6 +13,7 @@ namespace EvilInsultGenerator
     {
         public MainForm()
         {
+            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
             InitializeComponent();
             // Set the default selection to the 1st entry ('en' at the moment)
             combLang.SelectedIndex = 0;
@@ -77,6 +78,9 @@ namespace EvilInsultGenerator
         // The User wants to generate some insults!
         private void btnGenerate_Click(object sender, EventArgs e)
         {
+            btnGenerate.Enabled = false;
+            btnGenerate.Text = "Thinking about it...";
+            rtxtInsult.Text = "";
             // Convert selection to a string
             string lang = combLang.SelectedItem.ToString();
             // Send Request to server and save the response as a string
@@ -111,7 +115,8 @@ namespace EvilInsultGenerator
                 rtxtInsult.Text = "The server did not provide any data";
                 LogMessageToFile("Error: The server did not respond with data");
             }
-        }
+            btnGenerate.Text = "Generate Insult";
+            btnGenerate.Enabled = true;        }
         // ToolStrip Stuff
 
         // "Website" clicked

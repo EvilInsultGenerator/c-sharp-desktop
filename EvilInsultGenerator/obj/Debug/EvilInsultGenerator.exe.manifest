@@ -4,7 +4,7 @@
   <description asmv2:iconFile="EIG_Application.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="EvilInsultGenerator" version="1.0.3.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="EvilInsultGenerator" version="1.0.3.1" language="neutral" processorArchitecture="msil" />
     <commandLine file="EvilInsultGenerator.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -16,14 +16,14 @@
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
           UAC Manifest Options
-          If you want to change the Windows User Account Control level replace the 
+          If you want to change the Windows User Account Control level replace the
           requestedExecutionLevel node with one of the following.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         If you want to utilize File and Registry Virtualization for backward 
+         If you want to utilize File and Registry Virtualization for backward
          compatibility then delete the requestedExecutionLevel node.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EvilInsultGenerator.exe" size="297472">
-      <assemblyIdentity name="EvilInsultGenerator" version="1.0.3.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EvilInsultGenerator.exe" size="295936">
+      <assemblyIdentity name="EvilInsultGenerator" version="1.0.3.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>tkdk+yGg+CGHAopm0JbItN2YFjfyryMLgsMBgXYizCw=</dsig:DigestValue>
+        <dsig:DigestValue>0Y7QB3d+bGSjjzcSmDi5ojUA/p7XEgOYLDMSkx4KU0o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -63,13 +63,13 @@
       <dsig:DigestValue>WlboIc/6/n6+OmcpYI1I4UW7DM3lCAlS30ujoHfugGA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="EvilInsultGenerator.exe.config" size="438">
+  <file name="EvilInsultGenerator.exe.config" size="421">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>jv+lZ4f4/BHyk9EwjLylDe1zuwY3imyB8ymxdN5QeoQ=</dsig:DigestValue>
+      <dsig:DigestValue>0qMWUoh22KuNPfLdtC/p3Q1qSaS5tmQL8ZzD17nsLMY=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
